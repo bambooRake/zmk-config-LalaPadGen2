@@ -136,24 +136,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        COMBO_TAB_ALT {
-            bindings = <&lm 2 LEFT_ALT>;
-            key-positions = <4 12>;
-            slow-release;
-            layers = <0>;
-        };
-
-        test2 {
-            bindings = <&lm 2 LEFT_ALT>;
-            key-positions = <4 33>;
-            timeout-ms = <40>;
-            slow-release;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
     };
