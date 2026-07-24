@@ -14,10 +14,15 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    bindings = <&sticky_mod>, <&kp>;
+    bindings = <&sk>, <&kp>;
 };
 
 &lt { quick-tap-ms = <200>; };
+
+&sk {
+    // one-shot modifier (OSM): tap = 次の1キーだけ修飾 / hold = 通常の修飾キー
+    release-after-ms = <500>;  // 離してから次キーを待つ窓。長すぎると誤爆、短すぎると取りこぼす
+};
 
 / {
     behaviors {
