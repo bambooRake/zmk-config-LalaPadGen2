@@ -230,16 +230,3 @@ status = "okay";
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
-
-/* --- DEBUG ONLY: USB CDC ACM console for CONFIG_ZMK_USB_LOGGING (revert after debug) --- */
-&zephyr_udc0 {
-    cdc_acm_uart0: cdc_acm_uart0 {
-        compatible = "zephyr,cdc-acm-uart";
-    };
-};
-
-/ {
-    chosen {
-        zephyr,console = &cdc_acm_uart0;
-    };
-};
